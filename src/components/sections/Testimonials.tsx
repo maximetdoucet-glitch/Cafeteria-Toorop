@@ -53,21 +53,52 @@ export default function Testimonials() {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        {/* MOBILE: horizontal swipe carousel */}
+        <div className="md:hidden -mx-5 px-5">
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-3">
+            {testimonials.map((tr, idx) => (
+              <div key={idx} className="snap-start shrink-0 w-[85%] bg-white p-7 border border-brand-charcoal/5 relative shadow-sm rounded-2xl">
+                <Quote className="absolute top-6 right-6 text-brand-yellow/15" size={42} />
+                <div className="flex gap-1 mb-5">
+                  {[...Array(tr.stars)].map((_, i) => (
+                    <Star key={i} size={14} className="fill-brand-yellow text-brand-yellow" />
+                  ))}
+                </div>
+                <p className="text-brand-charcoal font-medium italic text-base mb-6 leading-relaxed relative z-10 line-clamp-6">
+                  &quot;{tr.text}&quot;
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-brand-charcoal rounded-full flex items-center justify-center text-brand-yellow font-black text-xs shrink-0">
+                    {tr.name.charAt(0)}
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-black text-brand-charcoal uppercase tracking-widest text-[11px] mb-0.5 truncate">{tr.name}</p>
+                    <p className="text-brand-red font-bold uppercase tracking-[0.2em] text-[8px]">{tr.tag}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-center gap-1.5 mt-4">
+            {testimonials.map((_, i) => (
+              <div key={i} className="w-1.5 h-1.5 rounded-full bg-brand-charcoal/15" />
+            ))}
+          </div>
+        </div>
+
+        {/* DESKTOP / TABLET: grid */}
+        <div className="hidden md:grid md:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((tr, idx) => (
             <div key={idx} className="bg-white p-8 md:p-10 border border-gray-100 relative group hover:border-brand-red/20 transition-all shadow-sm hover:shadow-xl">
               <Quote className="absolute top-8 right-8 text-gray-50 group-hover:text-brand-red/10 transition-colors" size={48} />
-              
               <div className="flex gap-1 mb-6">
                 {[...Array(tr.stars)].map((_, i) => (
                   <Star key={i} size={14} className="fill-brand-yellow text-brand-yellow" />
                 ))}
               </div>
-
               <p className="text-brand-charcoal font-medium italic text-lg mb-8 leading-relaxed relative z-10">
                 &quot;{tr.text}&quot;
               </p>
-
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 bg-brand-charcoal rounded-full flex items-center justify-center text-white font-black text-xs overflow-hidden border border-gray-50">
                   {tr.name.charAt(0)}
