@@ -19,8 +19,9 @@ export default function Hero() {
           alt="Cafetaria Toorop Nijmegen"
           fill
           sizes="100vw"
-          quality={90}
-          className="object-cover object-center scale-105"
+          quality={100}
+          unoptimized
+          className="object-cover object-center"
           priority
         />
         {/* Dark gradient overlay — strongest at bottom for text contrast */}

@@ -21,8 +21,9 @@ export default function AboutContent() {
               alt={t('about.meta.title')}
               fill
               sizes="100vw"
-              quality={90}
-              className="object-cover object-center scale-105"
+              quality={100}
+              unoptimized
+              className="object-cover object-center"
               priority
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/55 to-black/35" />
