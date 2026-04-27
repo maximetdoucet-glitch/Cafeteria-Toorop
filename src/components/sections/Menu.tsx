@@ -43,17 +43,17 @@ export default function Menu() {
   ];
   return (
     <section id="highlights" className="py-16 md:py-24 bg-brand-cream overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-7xl font-black text-brand-charcoal uppercase tracking-tighter leading-none mb-4">
+      <div className="container mx-auto px-5 sm:px-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-brand-charcoal uppercase tracking-tighter leading-none mb-4">
             {t('menu.title')}
           </h2>
-          <p className="text-gray-400 font-bold uppercase tracking-widest text-xs max-w-md mx-auto">
+          <p className="text-brand-charcoal/40 font-bold uppercase tracking-widest text-[11px] sm:text-xs max-w-md mx-auto">
             {t('menu.subtitle')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {highlights.map((item) => (
             <div key={item.name} className="group bg-white border border-gray-100 food-card-shadow overflow-hidden relative flex flex-col">
               {/* Popular Badge */}
@@ -105,21 +105,21 @@ export default function Menu() {
         </div>
 
         {/* CTA to full menu */}
-        <div className="mt-16 text-center">
+        <div className="mt-12 md:mt-16 text-center">
           <p className="text-[10px] font-black uppercase tracking-widest text-brand-red mb-6">
             {t('section.order.info')}
           </p>
-          <div className="flex flex-col md:flex-row gap-6 md:gap-12 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 md:gap-12 justify-center items-stretch sm:items-center">
             <button
               onClick={openOrder}
-              className="btn-premium-secondary shimmer flex w-full md:w-auto justify-center items-center gap-3"
+              className="btn-premium-secondary shimmer flex w-full sm:w-auto justify-center items-center gap-3 min-h-[52px]"
             >
               {t('hero.cta.order')}
               <ChevronRight size={18} />
             </button>
             <Link
               href="/menu"
-              className="btn-premium-secondary shimmer flex w-full md:w-auto justify-center items-center gap-3"
+              className="btn-premium-secondary shimmer flex w-full sm:w-auto justify-center items-center gap-3 min-h-[52px]"
             >
               {t('menu.cta.full')}
               <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />

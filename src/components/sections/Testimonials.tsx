@@ -30,30 +30,30 @@ export default function Testimonials() {
   ];
   return (
     <section className="py-16 md:py-24 bg-[#FAFAFA] overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row justify-between lg:items-end mb-16 gap-8 text-center lg:text-left">
+      <div className="container mx-auto px-5 sm:px-6">
+        <div className="flex flex-col lg:flex-row justify-between lg:items-end mb-12 md:mb-16 gap-6 sm:gap-8 text-center lg:text-left">
           <div className="max-w-4xl">
-             <h2 className="text-3xl md:text-6xl lg:text-7xl font-black text-brand-charcoal uppercase tracking-tighter leading-none mb-4 md:whitespace-nowrap">
+             <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-brand-charcoal uppercase tracking-tighter leading-none mb-4 lg:whitespace-nowrap">
                 {t('testimonials.title').split(' ').map((word, i) => (
-                  i === t('testimonials.title').split(' ').length - 1 ? <span key={i} className="text-brand-red">{word}</span> : word + ' '
+                  i === t('testimonials.title').split(' ').length - 1 ? <span key={i} className="text-brand-yellow italic">{word}</span> : word + ' '
                 ))}
              </h2>
-             <p className="text-gray-400 font-bold uppercase tracking-widest text-xs">
+             <p className="text-brand-charcoal/40 font-bold uppercase tracking-widest text-[11px] sm:text-xs">
                 {t('testimonials.subtitle')}
              </p>
           </div>
-          <a 
+          <a
             href="https://www.google.com/search?q=Cafetaria+Toorop+Nijmegen"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-premium-primary shimmer flex items-center gap-3 !px-8 !py-4 text-[11px]"
+            className="btn-premium-primary shimmer inline-flex justify-center items-center gap-3 !px-8 !py-4 text-[11px] min-h-[48px] self-center lg:self-auto"
           >
             {t('reviews.cta.button')}
             <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((tr, idx) => (
             <div key={idx} className="bg-white p-8 md:p-10 border border-gray-100 relative group hover:border-brand-red/20 transition-all shadow-sm hover:shadow-xl">
               <Quote className="absolute top-8 right-8 text-gray-50 group-hover:text-brand-red/10 transition-colors" size={48} />
@@ -81,10 +81,10 @@ export default function Testimonials() {
           ))}
         </div>
  
-        <div className="mt-16 flex justify-center">
-          <Link 
+        <div className="mt-12 md:mt-16 flex justify-center">
+          <Link
             href="/reviews"
-            className="btn-premium-primary shimmer flex items-center gap-3 !px-10 !py-5"
+            className="btn-premium-primary shimmer flex items-center gap-3 !px-8 sm:!px-10 !py-4 sm:!py-5 min-h-[52px]"
           >
             {t('testimonials.cta.all')}
             <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />

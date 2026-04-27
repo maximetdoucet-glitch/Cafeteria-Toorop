@@ -23,10 +23,10 @@ export default function FullMenu() {
   const [activeCategory, setActiveCategory] = useState(menuData[0].id);
 
   return (
-    <section id="menu" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="menu" className="py-16 md:py-20 bg-white">
+      <div className="container mx-auto px-5 sm:px-6">
         {/* Sticky Category Tabs */}
-        <div className="sticky top-[64px] z-30 bg-white/95 backdrop-blur-md border-b border-gray-100 -mx-4 px-4 mb-16">
+        <div className="sticky top-[64px] z-30 bg-white/95 backdrop-blur-md border-b border-gray-100 -mx-5 sm:-mx-6 px-5 sm:px-6 mb-12 md:mb-16">
           <div className="flex overflow-x-auto gap-1 py-3 no-scrollbar">
             {menuData.map((cat) => (
               <button
@@ -48,7 +48,7 @@ export default function FullMenu() {
         </div>
 
         {/* Menu Categories */}
-        <div className="space-y-24">
+        <div className="space-y-16 md:space-y-24">
           {menuData.map((category, catIdx) => (
             <div key={category.id} id={`cat-${category.id}`} className="scroll-mt-32">
               {/* Category Hero Banner */}
@@ -78,7 +78,7 @@ export default function FullMenu() {
               </div>
 
               {/* Items Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-1 px-2 md:px-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-1 px-2 md:px-6">
                 {category.items.map((item) => (
                   <div
                     key={item.nameKey}
@@ -123,8 +123,8 @@ export default function FullMenu() {
         </div>
 
         {/* Order CTA */}
-        <div className="mt-24 text-center">
-          <div className="bg-brand-charcoal p-12 md:p-20 relative overflow-hidden rounded-[2.5rem]">
+        <div className="mt-16 md:mt-24 text-center">
+          <div className="bg-brand-charcoal p-8 sm:p-12 md:p-20 relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem]">
             <div className="absolute inset-0 bg-brand-red opacity-5 blur-3xl rounded-full translate-x-1/3 -translate-y-1/4" />
             <div className="relative z-10">
               <p className="text-white font-black uppercase tracking-widest text-xs mb-2">

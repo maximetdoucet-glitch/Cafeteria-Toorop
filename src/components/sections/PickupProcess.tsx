@@ -27,21 +27,21 @@ export default function PickupProcess() {
   ];
   return (
     <section className="py-16 md:py-24 bg-brand-charcoal text-white">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl md:text-6xl font-black mb-16 uppercase tracking-tighter italic">
+      <div className="container mx-auto px-5 sm:px-6 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-black mb-12 md:mb-16 uppercase tracking-tighter italic">
           {t('pickup.title')}
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 relative">
           {/* Connector Line (Desktop) */}
           <div className="hidden md:block absolute top-[20%] left-[20%] right-[20%] h-1 border-t-4 border-dashed border-white/5" />
-          
+
           {steps.map((step, idx) => (
             <div key={idx} className="relative z-10 flex flex-col items-center">
-              <div className="w-24 h-24 bg-brand-red rounded-full flex items-center justify-center mb-6 shadow-2xl border-4 border-white/10 group hover:scale-110 transition-transform">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 bg-brand-red rounded-full flex items-center justify-center mb-5 md:mb-6 shadow-2xl border-4 border-white/10 group hover:scale-110 transition-transform">
                 {step.icon}
               </div>
-              <h3 className="text-2xl font-black mb-4 uppercase tracking-tight italic">{step.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-black mb-3 md:mb-4 uppercase tracking-tight italic">{step.title}</h3>
               <p className="text-white/50 text-sm font-medium leading-relaxed max-w-xs mx-auto uppercase tracking-wide">
                 {step.description}
               </p>
@@ -52,7 +52,7 @@ export default function PickupProcess() {
         <div className="mt-12 md:mt-20 flex justify-center">
            <button
             onClick={openOrder}
-            className="btn-premium-primary shimmer flex items-center justify-center gap-3 group"
+            className="btn-premium-primary shimmer flex items-center justify-center gap-3 group min-h-[52px]"
           >
             {t('hero.cta.order')}
             <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />

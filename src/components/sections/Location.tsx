@@ -8,24 +8,24 @@ export default function Location() {
   const { t } = useLanguage();
   return (
     <section id="location" className="py-16 md:py-24 bg-white text-brand-charcoal relative overflow-hidden">
-      <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div className="container mx-auto px-5 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
         <div>
-          <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-6 md:mb-8 italic text-shadow-food">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter mb-5 md:mb-8 italic text-shadow-food">
             {t('location.title').split(' ').map((word, i) => (
-              i === t('location.title').split(' ').length - 1 ? <span key={i} className="text-brand-red decoration-brand-charcoal underline underline-offset-8">{word}</span> : word + ' '
+              i === t('location.title').split(' ').length - 1 ? <span key={i} className="text-brand-yellow decoration-brand-charcoal underline underline-offset-8">{word}</span> : word + ' '
             ))}
           </h2>
-          <p className="text-gray-500 mb-12 text-sm md:text-lg font-bold uppercase tracking-widest leading-none">
+          <p className="text-brand-charcoal/50 mb-10 md:mb-12 text-xs sm:text-sm md:text-lg font-bold uppercase tracking-widest leading-none">
             {t('location.subtitle')}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 md:gap-12">
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-brand-red">
                 <MapPin className="w-5 h-5" />
                 <span className="text-xs font-black uppercase tracking-widest">{t('location.address.title')}</span>
               </div>
-              <p className="text-brand-charcoal font-black text-xl leading-tight uppercase">
+              <p className="text-brand-charcoal font-black text-lg sm:text-xl leading-tight uppercase">
                 Tooropstraat 2<br />
                 6521 NP Nijmegen
               </p>
@@ -36,7 +36,7 @@ export default function Location() {
                 <Clock className="w-5 h-5" />
                 <span className="text-xs font-black uppercase tracking-widest">{t('location.hours.title')}</span>
               </div>
-              <p className="text-brand-charcoal font-black text-xl uppercase tracking-tight">
+              <p className="text-brand-charcoal font-black text-lg sm:text-xl uppercase tracking-tight">
                 {t('location.hours.days')}
               </p>
             </div>
@@ -46,7 +46,7 @@ export default function Location() {
                   <Phone className="w-5 h-5" />
                   <span className="text-xs font-black uppercase tracking-widest">{t('location.contact.title')}</span>
                 </div>
-                <p className="text-brand-charcoal font-black text-xl uppercase">
+                <p className="text-brand-charcoal font-black text-lg sm:text-xl uppercase">
                   024 324 1143
                 </p>
             </div>
@@ -68,11 +68,11 @@ export default function Location() {
           </div>
           
           <div className="mt-8 md:mt-16">
-             <a 
+             <a
                href="https://www.google.com/maps/dir/?api=1&destination=Tooropstraat+2+Nijmegen"
                target="_blank"
                rel="noopener noreferrer"
-               className="btn-premium-outline shimmer !inline-flex items-center justify-center"
+               className="btn-premium-outline shimmer !inline-flex items-center justify-center min-h-[52px] !w-full sm:!w-auto"
              >
                 {t('location.route')}
              </a>
@@ -80,7 +80,7 @@ export default function Location() {
         </div>
 
         {/* Map Placeholder */}
-        <div className="relative aspect-square md:aspect-video rounded-none overflow-hidden bg-brand-charcoal shadow-[15px_15px_0px_0px_rgba(229,62,62,1)] md:shadow-[30px_30px_0px_0px_rgba(229,62,62,1)]">
+        <div className="relative aspect-square md:aspect-video rounded-none overflow-hidden bg-brand-charcoal shadow-[10px_10px_0px_0px_rgba(215,38,30,1)] md:shadow-[24px_24px_0px_0px_rgba(215,38,30,1)] mb-2 md:mb-0 md:mr-6 lg:mr-8">
            <iframe
               title={t('location.maps.title')}
               src="https://maps.google.com/maps?q=Cafetaria%20Toorop,%20Tooropstraat%202,%20Nijmegen&t=&z=16&ie=UTF8&iwloc=&output=embed"
