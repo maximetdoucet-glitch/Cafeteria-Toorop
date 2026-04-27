@@ -22,7 +22,7 @@ export default function Hero() {
   const { openOrder } = useOrder();
 
   return (
-    <section className="relative min-h-[100svh] w-full overflow-hidden bg-brand-cream pt-24 md:pt-28 pb-20 md:pb-24 flex items-center">
+    <section className="relative min-h-[100svh] w-full overflow-hidden bg-brand-cream pt-20 md:pt-28 pb-20 md:pb-24 flex items-center">
       {/* Decorative blurred color blobs */}
       <div className="absolute -top-32 -left-32 w-72 sm:w-96 h-72 sm:h-96 bg-brand-yellow/30 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-32 -right-32 w-80 sm:w-[600px] h-80 sm:h-[600px] bg-brand-red/15 rounded-full blur-3xl pointer-events-none" />
@@ -61,7 +61,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-heading font-black text-[44px] sm:text-7xl md:text-8xl lg:text-[7rem] xl:text-[10rem] 2xl:text-[11rem] leading-[0.85] mb-5 sm:mb-7 text-brand-charcoal uppercase tracking-tighter"
+              className="font-heading font-black text-[40px] sm:text-7xl md:text-8xl lg:text-[7rem] xl:text-[10rem] 2xl:text-[11rem] leading-[0.85] mb-5 sm:mb-7 text-brand-charcoal uppercase tracking-tighter"
             >
               Cafetaria<br />
               <span className="relative inline-block">
@@ -119,7 +119,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-3 pt-6 sm:pt-8 border-t border-brand-charcoal/10"
+              className="flex flex-wrap items-center gap-x-5 sm:gap-x-8 gap-y-3 pt-5 sm:pt-8 border-t border-brand-charcoal/10"
             >
               <a
                 href="https://www.google.com/search?q=Cafetaria+Toorop+Nijmegen"
@@ -152,8 +152,8 @@ export default function Hero() {
 
           {/* Right column — animated food mosaic */}
           <div className="lg:col-span-5 xl:col-span-5 order-1 lg:order-2">
-            <div className="relative max-w-[420px] sm:max-w-[480px] mx-auto lg:max-w-none lg:ml-auto">
-              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="relative max-w-[280px] sm:max-w-[400px] md:max-w-[460px] mx-auto lg:max-w-none lg:ml-auto">
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-3 md:gap-4">
                 {featured.map((item, idx) => (
                   <motion.div
                     key={item.label}

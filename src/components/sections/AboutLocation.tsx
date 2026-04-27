@@ -32,16 +32,16 @@ export default function AboutLocation() {
         </motion.div>
 
         {/* Photo + info two-column */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start mb-12 md:mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start mb-12 md:mb-16">
           {/* Photo — small editorial framing with offset shadow */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
-            className="md:col-span-5 relative md:pl-2 lg:pl-4"
+            className="lg:col-span-5 relative lg:pl-4"
           >
-            <div className="relative aspect-[4/5] max-w-[320px] sm:max-w-sm mx-auto md:mx-0 ring-1 ring-brand-charcoal/10 overflow-hidden shadow-[10px_10px_0px_0px_rgba(244,180,26,0.9)] md:shadow-[16px_16px_0px_0px_rgba(244,180,26,0.9)]">
+            <div className="relative aspect-[4/5] max-w-[320px] sm:max-w-sm mx-auto lg:mx-0 ring-1 ring-brand-charcoal/10 overflow-hidden shadow-[10px_10px_0px_0px_rgba(244,180,26,0.9)] md:shadow-[16px_16px_0px_0px_rgba(244,180,26,0.9)]">
               <Image
                 src="/images/shop-real.png"
                 alt="Cafetaria Toorop, Tooropstraat 2"
@@ -65,7 +65,7 @@ export default function AboutLocation() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="md:col-span-7"
+            className="lg:col-span-7"
           >
             <p className="text-base sm:text-lg md:text-xl text-brand-charcoal/80 leading-relaxed font-medium mb-8 md:mb-10">
               {t('about.origins.text1')}

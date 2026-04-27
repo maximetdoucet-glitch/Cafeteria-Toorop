@@ -29,6 +29,19 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+/* Prevent horizontal scroll on small screens */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Ensure interactive elements get a tactile tap on mobile without iOS blue flash */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 @layer base {
